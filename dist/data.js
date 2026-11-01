@@ -1,0 +1,9 @@
+// Original fictional examples. No real family memories are bundled.
+export const SAMPLE_MEMORIES = [
+  { id: 'radio', title: 'Radio in the rain', date: '1998-07-18', text: 'During a monsoon blackout, Grandma put the little red radio on the windowsill. Its batteries had died, so she hummed the songs herself. We sat on the kitchen floor with a candle between us until the lights returned.' },
+  { id: 'bicycle', title: 'The blue bicycle', date: '2004-04-10', text: 'Dad ran beside my blue bicycle, one hand under the saddle. At the bend by the banyan tree I looked back and saw him standing far behind, clapping. I had been riding on my own for longer than I knew.' },
+  { id: 'recipe', title: 'A recipe without measurements', date: '2010-11-02', text: 'Aunt Mira taught me to make her orange cake. She measured flour with a chipped teacup and said the batter should fall like a ribbon. The card in the recipe tin only says: save the peel, and be patient.' },
+  { id: 'platform', title: 'Platform seven', date: '2016-08-23', text: 'On the morning I left home for university, my brother slipped a packet of biscuits into my bag at the railway station. He stood on platform seven pretending he was only there to check the departure board. He waved until the train turned.' },
+  { id: 'garden', title: 'The seeds he saved', date: '2007-06-03', text: 'Grandpa kept seeds in folded newspaper envelopes above the garden shed door. Every summer we planted marigolds by the gate. He wrote the year on each envelope, so the next season always began with something from the last.' },
+  { id: 'lantern', title: 'The lantern on the stairs', date: '2012-10-31', text: 'Each Halloween we left a paper lantern on the stairs for anyone coming home late. One windy night its shadow looked like a person waiting by the door. Mum laughed and said even a house needs a little company.' }
+];

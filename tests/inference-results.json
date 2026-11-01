@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-10-31T16:49:24.418Z",
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "dtype": "q8",
+  "backend": "onnxruntime-node CPU",
+  "dimensions": 384,
+  "elapsedMs": 4747,
+  "archiveSize": 6,
+  "checks": [
+    {
+      "query": "music during a power cut",
+      "expectedTitle": "Radio in the rain",
+      "ranking": [
+        {
+          "title": "Radio in the rain",
+          "score": 0.4033300859982009
+        },
+        {
+          "title": "Platform seven",
+          "score": 0.12337621818803828
+        },
+        {
+          "title": "The blue bicycle",
+          "score": 0.11144167873430734
+        },
+        {
+          "title": "The lantern on the stairs",
+          "score": 0.0562331159296332
+        },
+        {
+          "title": "A recipe without measurements",
+          "score": 0.045459498337828405
+        },
+        {
+          "title": "The seeds he saved",
+          "score": 0.01106649525138474
+        }
+      ]
+    },
+    {
+      "query": "how someone taught me to ride",
+      "expectedTitle": "The blue bicycle",
+      "ranking": [
+        {
+          "title": "The blue bicycle",
+          "score": 0.41706880798169466
+        },
+        {
+          "title": "Platform seven",
+          "score": 0.2898413702220877
+        },
+        {
+          "title": "Radio in the rain",
+          "score": 0.11926217799679958
+        },
+        {
+          "title": "The lantern on the stairs",
+          "score": 0.09286296497004123
+        },
+        {
+          "title": "The seeds he saved",
+          "score": 0.07144391105935138
+        },
+        {
+          "title": "A recipe without measurements",
+          "score": 0.04452348394785949
+        }
+      ]
+    }
+  ]
+}

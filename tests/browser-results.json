@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "scope": "Manual checks of the local Sites preview in Chromium; production public access and mobile behavior are outside this run.",
+  "verifiedAt": "2026-11-01T05:56:44.703805+00:00",
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "dtype": "q8",
+  "backend": "browser WebAssembly, single-thread worker",
+  "method": "Observed application UI through the supported browser; no mock embeddings or substituted search results.",
+  "checks": [
+    {
+      "name": "six fictional memories initially visible",
+      "passed": true
+    },
+    {
+      "name": "session-only archive default visible",
+      "passed": true
+    },
+    {
+      "name": "actual browser model downloaded and loaded",
+      "passed": true
+    },
+    {
+      "name": "first paraphrase retrieves expected source",
+      "passed": true,
+      "query": "music during a power cut",
+      "firstTitle": "Radio in the rain",
+      "displayedScore": 0.395
+    },
+    {
+      "name": "second paraphrase retrieves expected source",
+      "passed": true,
+      "query": "how someone taught me to ride",
+      "firstTitle": "The blue bicycle",
+      "displayedScore": 0.405
+    },
+    {
+      "name": "unrelated query receives low-similarity notice",
+      "passed": true,
+      "query": "quantum processors on Mars",
+      "firstTitle": "Platform seven",
+      "displayedScore": 0.057,
+      "notice": "No close connection found. These are the nearest passages."
+    },
+    {
+      "name": "add fictional note through the form after UUID compatibility repair",
+      "passed": true,
+      "observedCount": 7,
+      "submission": "Enter key in title field"
+    },
+    {
+      "name": "opt-in browser persistence survives reload",
+      "passed": true,
+      "observedCount": 7
+    },
+    {
+      "name": "export downloads valid version-1 JSON with all seven notes",
+      "passed": true
+    },
+    {
+      "name": "remove test note then import exported archive after confirmation",
+      "passed": true,
+      "observedCount": 7
+    },
+    {
+      "name": "remove test note, opt out, reload to six fictional samples",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Scores are the rounded values displayed by the UI; browser and Node CPU backends can differ.",
+    "Three query examples are not a general retrieval benchmark; the 0.25 notice threshold is not calibrated.",
+    "The final status-label and score-spacing changes do not alter embeddings or ranking.",
+    "Mobile, complete offline operation, and signed-out production access were not verified in this run."
+  ],
+  "previousRun": {
+    "httpStatus": 403,
+    "note": "An earlier automated record was blocked at HTTP 403. This report records fresh observations of the functioning local preview."
+  }
+}

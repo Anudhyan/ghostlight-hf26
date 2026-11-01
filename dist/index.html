@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#162325">
+  <meta name="description" content="Find the stories that linger. Ghostlight is a private memory archive with open-source AI search that runs in your browser.">
+  <title>Ghostlight — A lantern for lost stories</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23162325'/%3E%3Cpath d='M24 20v-5a8 8 0 0 1 16 0v5M20 23h24l4 28H16z' fill='none' stroke='%23e9b969' stroke-width='4'/%3E%3Cpath d='M32 30c-12 14 10 17 0 0' fill='%23e9b969'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#search">Skip to memory search</a>
+  <header class="site-header page-width">
+    <a href="#" class="brand" aria-label="Ghostlight home">
+      <svg class="brand-icon" viewBox="0 0 32 40" fill="none" aria-hidden="true"><path d="M10 12V8a6 6 0 0 1 12 0v4M7 15h18l3 21H4l3-21ZM4 39h24M10 15v21m12-21v21M5 12h22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 21c-9 11 8 13 0 0Z" fill="currentColor"/></svg>
+      <span>ghostlight<span class="brand-dot">.</span></span>
+    </a>
+    <nav aria-label="Main navigation"><a href="#search">Find a story</a><a href="#archive">The archive</a><a href="#about">How it works</a></nav>
+    <span class="local-badge"><span aria-hidden="true">●</span> Made to stay with you</span>
+  </header>
+
+  <main>
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✧</span> A lantern for lost stories</p>
+        <h1 id="hero-title">Some stories<br>never really<br><em>leave us.</em></h1>
+        <p class="hero-description">A phrase. A familiar place. The feeling of being home. Find the memories you kept, even when the exact words escape you.</p>
+        <a class="hero-link" href="#search">Step into the archive <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="art-star star-one">✧</span><span class="art-star star-two">✧</span><span class="art-star star-three">·</span>
+        <svg class="lantern" viewBox="0 0 390 460" fill="none">
+          <defs>
+            <radialGradient id="warm-glow"><stop stop-color="#f6ce83" stop-opacity=".45"/><stop offset="1" stop-color="#e5a64c" stop-opacity="0"/></radialGradient>
+            <linearGradient id="glass" x1="135" y1="190" x2="260" y2="345" gradientUnits="userSpaceOnUse"><stop stop-color="#f9cd82" stop-opacity=".13"/><stop offset="1" stop-color="#f9cd82" stop-opacity=".02"/></linearGradient>
+            <linearGradient id="brass" x1="110" y1="110" x2="280" y2="405" gradientUnits="userSpaceOnUse"><stop stop-color="#e9c78c"/><stop offset=".5" stop-color="#a27b43"/><stop offset="1" stop-color="#e4ba75"/></linearGradient>
+          </defs>
+          <ellipse cx="195" cy="413" rx="94" ry="12" fill="#0a1416" opacity=".65"/>
+          <circle cx="195" cy="261" r="178" fill="url(#warm-glow)"/>
+          <path d="M151 144v-34c0-64 88-64 88 0v34" stroke="url(#brass)" stroke-width="5"/>
+          <path d="M157 141v-31c0-55 76-55 76 0v31" stroke="#e7c58c" stroke-opacity=".28"/>
+          <path d="M143 152h104l17 30H126l17-30Z" fill="#263332" stroke="url(#brass)" stroke-width="3"/>
+          <path d="M154 151v-10h82v10M140 167h109" stroke="url(#brass)" stroke-width="3"/>
+          <path d="m131 188-17 169c0 17 162 17 162 0l-17-169H131Z" fill="url(#glass)" stroke="url(#brass)" stroke-width="3"/>
+          <path d="m146 188-7 170m105-170 7 170M194 188v172" stroke="#bf965c" stroke-width="3"/>
+          <path d="m147 204-4 69" stroke="#f8dfb0" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+          <path d="M193 263c-3 21-26 24-26 43 0 38 56 39 56 4 0-18-24-27-30-47Z" fill="#efb35e"/>
+          <path d="M195 291c-3 13-13 17-13 27 0 19 28 20 28 0 0-9-12-20-15-27Z" fill="#fff0c6"/>
+          <rect x="182" y="331" width="26" height="27" rx="3" fill="#dfc592"/>
+          <path d="M111 361h168l10 26H101l10-26ZM113 389h164v15H113v-15Z" fill="#263332" stroke="url(#brass)" stroke-width="3"/>
+          <path d="M119 373h152M124 396h142" stroke="#d1ad70" stroke-opacity=".5"/>
+          <path d="M75 344c-15-19-31-12-30 1 2 14 28 15 30-1Zm240-121c12-13 23-8 22 2-2 10-20 9-22-2Z" stroke="#a9864d" stroke-opacity=".5"/>
+          <path d="m64 354 8 27m252-144-4 19" stroke="#a9864d" stroke-opacity=".5"/>
+        </svg>
+        <span class="art-caption">For the things we don't want to lose.</span>
+      </div>
+    </section>
+
+    <div class="introduction page-width"><span class="section-marker">THE GHOST IN THE MACHINE</span><p>Not a voice from the past. A way back to its words.</p><span class="intro-flower" aria-hidden="true">✺</span></div>
+
+    <section id="search" class="search-section page-width" aria-labelledby="search-heading">
+      <div class="section-heading"><div><p class="eyebrow">01 / Follow a feeling</p><h2 id="search-heading">What are you looking for?</h2></div><span class="section-note">Search by meaning,<br>not just matching words.</span></div>
+      <div class="search-panel">
+        <form id="search-form" class="search-form">
+          <label for="query">Describe a memory, a moment, or a feeling</label>
+          <div class="search-input-row"><input id="query" name="query" type="search" maxlength="500" placeholder="e.g. someone who made me feel at home" required autocomplete="off"><button id="search-button" type="submit">Find a story <span aria-hidden="true">↗</span></button></div>
+        </form>
+        <div id="sample-queries" class="sample-queries"><span>Try a feeling</span><button type="button" data-query="music during a power cut">Music in the dark</button><button type="button" data-query="how someone taught me to ride">A first bicycle</button><button type="button" data-query="a song I still remember">An old melody</button></div>
+        <div class="model-area"><div class="model-copy"><span class="model-spark" aria-hidden="true">✧</span><div><p id="model-status" role="status">The lantern is waiting. Load the model to begin.</p><p class="model-detail">First visit: download the open-source model (about 23 MB). Your searches then run on this device.</p></div></div><button id="load-model" class="button-secondary" type="button">Light the lantern</button></div>
+        <progress id="model-progress" max="100" value="0" hidden aria-label="Model download progress"></progress>
+      </div>
+      <div class="results-heading"><h3>Stories that echo back</h3><p id="result-status" aria-live="polite">Your original words will appear here after a search.</p></div>
+      <div id="results" class="results-grid"></div>
+      <p class="similarity-note">Matches are ranked by semantic similarity. A score measures related meaning, not factual confidence.</p>
+    </section>
+
+    <section id="archive" class="archive-section page-width" aria-labelledby="archive-heading">
+      <div class="section-heading"><div><p class="eyebrow">02 / Keep a little light</p><h2 id="archive-heading">The memory shelf<span class="count" id="archive-count">0</span></h2></div><p class="section-note">Small stories.<br>A place to find them again.</p></div>
+      <p class="archive-intro">Begin with the fictional demo collection, or add words of your own. Search results always return the saved passage, without rewriting it.</p>
+      <div id="archive-list" class="archive-grid"></div>
+      <details class="archive-tools" open>
+        <summary>Add a memory &amp; look after your archive <span aria-hidden="true">+</span></summary>
+        <div class="tools-content">
+          <form id="add-form" class="add-form">
+            <h3>Give a moment a home.</h3>
+            <p>A few sentences are enough. Keep each entry about one memory for more useful matches.</p>
+            <div class="form-row"><div><label for="title">A name for this memory</label><input id="title" name="title" type="text" maxlength="100" placeholder="The kitchen on Sundays" required></div><div><label for="memory-date">Date <span class="optional">(optional)</span></label><input id="memory-date" name="date" type="date"></div></div>
+            <label for="memory-text">The story, in your words</label><textarea id="memory-text" name="text" rows="5" maxlength="1000" placeholder="What do you want to remember?" required></textarea>
+            <button type="submit" class="button-primary">Place on the shelf <span aria-hidden="true">+</span></button>
+          </form>
+          <aside class="archive-care" aria-labelledby="care-heading">
+            <p class="eyebrow">Yours to keep</p><h3 id="care-heading">You hold the keys.</h3>
+            <label class="checkbox-label" for="remember-device"><input id="remember-device" type="checkbox"><span>Remember my archive on this device</span></label>
+            <p id="privacy-status" role="status">Session only. Export a copy before closing this tab.</p>
+            <p class="care-note">Only enable saving on a device you trust. Other people using the same browser profile could access a saved archive.</p>
+            <div class="data-buttons"><button id="export-archive" class="button-secondary" type="button">Export archive <span aria-hidden="true">↓</span></button><label class="button-secondary import-button" for="import-file">Import JSON <span aria-hidden="true">↑</span><input id="import-file" type="file" accept="application/json,.json"></label></div>
+            <div class="reset-buttons"><button id="reset-demo" class="text-button" type="button">Restore fictional demo</button><button id="forget-all" class="text-button danger" type="button">Forget all memories</button></div>
+            <p class="care-note">Exported files contain your original text. Keep a copy somewhere private. Restoring or forgetting replaces the current shelf.</p>
+          </aside>
+        </div>
+      </details>
+    </section>
+
+    <section id="about" class="about-section page-width" aria-labelledby="about-heading">
+      <div class="about-heading"><p class="eyebrow">03 / Open by design</p><h2 id="about-heading">A little technology.<br><em>A lot worth keeping.</em></h2><p>Inspired by the stories that linger after someone leaves the room. Ghostlight helps you revisit what was written, with no invented memories and no imitation of a person's voice.</p></div>
+      <div class="how-it-works"><article><span>01</span><div><h3>Keep the words.</h3><p>Add a memory, import an archive, or explore the fictional examples. You choose whether to save it in your browser.</p></div></article><article><span>02</span><div><h3>Find the meaning.</h3><p>An open-source embedding model compares your question with your archive, entirely on your device.</p></div></article><article><span>03</span><div><h3>Return to the source.</h3><p>Read the original passages, export them, or take the code and make this little lantern your own.</p></div></article></div>
+    </section>
+    <div class="privacy-strip page-width"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 5v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><p>Your memories and search text stay in your browser. The app downloads model and runtime files when you initialize AI; it sends no archive text to an inference service.</p></div>
+  </main>
+
+  <footer class="site-footer page-width"><div><a class="brand footer-brand" href="#">ghostlight<span class="brand-dot">.</span></a><p>A lantern for lost stories.</p></div><div class="footer-links"><a href="https://huggingface.co/Xenova/all-MiniLM-L6-v2" target="_blank" rel="noopener noreferrer">The open model ↗</a><a href="https://huggingface.co/docs/transformers.js" target="_blank" rel="noopener noreferrer">Transformers.js ↗</a><a href="https://dev.to/challenges/hacktoberfest-week4-2026-10-26" target="_blank" rel="noopener noreferrer">Hacktoberfest 2026 ↗</a></div><span class="footer-flower" aria-hidden="true">✺</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

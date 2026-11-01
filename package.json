@@ -1,0 +1,12 @@
+{
+  "name": "ghostlight-memory-lantern",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:inference": "node tests/inference.mjs"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "3.8.1"
+  }
+}

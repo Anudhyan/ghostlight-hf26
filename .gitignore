@@ -1,0 +1,5 @@
+node_modules/
+.cache/
+work/
+.DS_Store
+.env*
