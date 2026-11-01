@@ -8,7 +8,7 @@ Built as a new project for the [Hacktoberfest Open-Source AI Challenge: Week 4](
 
 [Open Ghostlight](https://ghostlight-memory-lantern-2026.coatedaspen1.chatgpt.site).
 
-The demo is deployed for owner review and currently private. Enable public access before using it as a challenge demo, or provide a video walkthrough accessible to judges.
+The live demo is public. Its access setting was confirmed on 1 November 2026.
 
 1. Load the local model. The first visit downloads roughly 23 MB of model weights plus the JavaScript/WASM runtime, so it needs an internet connection.
 2. Search the fictional archive with a phrase such as `music during a power cut` or `how someone taught me to ride`.
@@ -55,7 +55,7 @@ npm run test:inference
 
 `npm test` passes the archive validation and vector-ranking checks. `npm run test:inference` exercises the actual downloaded model against fictional retrieval fixtures; it requires internet for the first model download. Real CPU inference passed both paraphrase fixtures on 31 October 2026: “music during a power cut” retrieved “Radio in the rain” (cosine 0.403), and “how someone taught me to ride” retrieved “The blue bicycle” (0.417). The run took 4.75 seconds including model initialization in this environment; this is not a browser performance benchmark. Full output is in `tests/inference-results.json`.
 
-On 1 November 2026, a fresh manual browser check on the local preview loaded the actual WebAssembly model and retrieved the same two expected stories (displayed similarities 0.395 and 0.405). An unrelated query, `quantum processors on Mars`, produced the low-similarity notice with a top score of 0.057. These are a few illustrative checks, not an accuracy benchmark; the 0.25 notice threshold is a heuristic. Adding a fictional note, opt-in persistence across reload, valid JSON export, confirmed import, individual removal, and returning to session-only mode were also checked. The add control now supports preview origins where `crypto.randomUUID` is unavailable. See `tests/browser-results.json` for the scope and observations. Public access to the production demo remains a separate publication step.
+On 1 November 2026, a fresh manual browser check on the local preview loaded the actual WebAssembly model and retrieved the same two expected stories (displayed similarities 0.395 and 0.405). An unrelated query, `quantum processors on Mars`, produced the low-similarity notice with a top score of 0.057. These are a few illustrative checks, not an accuracy benchmark; the 0.25 notice threshold is a heuristic. Adding a fictional note, opt-in persistence across reload, valid JSON export, confirmed import, individual removal, and returning to session-only mode were also checked. The add control now supports preview origins where `crypto.randomUUID` is unavailable. See `tests/browser-results.json` for the scope and observations. The production demo's access setting was confirmed public on 1 November 2026; the browser-inference results above refer to the local preview.
 
 The project is buildless. Main files:
 
@@ -72,7 +72,6 @@ docs/
   dev-post.md         DEV submission draft
   demo-script.md      Suggested video walkthrough
   publish-checklist.md
-.openai/hosting.json   Sites identity and static deployment configuration
 ```
 
 ## Credits and licenses
